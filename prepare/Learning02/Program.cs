@@ -4,25 +4,24 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.Write("Enter number: ");
-        string valueFromUser = Console.ReadLine();
+        Job job1 = new Job();
+        job1._jobTitle = "Software Enginner";
+        job1._company = "Microsoft";
+        job1._startYear = 2019;
+        job1._endYear = 2022;
 
-        int x = int.Parse(valueFromUser);
-        int y = 2;
-        int z = 5;
+        Job job2 = new Job();
+        job2._jobTitle = "Manager";
+        job2._company = "Apple";
+        job2._startYear = 2022;
+        job2._endYear = 2023;
 
-        if((x<y || x<z) && y<z)
-        {
-            Console.WriteLine("Greater");
-        }
-        else if(x < y)
-        {
-            Console.WriteLine("Less");
-        }
+        Resume myResume = new Resume();
+        myResume._name = "Allision Rose";
 
-        else
-        {
-            Console.WriteLine("Equal");
-        }
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        myResume.Display();
     }
 }
