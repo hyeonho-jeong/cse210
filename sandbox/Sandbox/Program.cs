@@ -43,7 +43,7 @@ class Program
 
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
-            foreach(Person p in people)
+            foreach(Person qa in people)
             {
                 outputFile.WriteLine($"{p._firstName}~~{p._lastName}~~{p._age}");
             }
