@@ -35,7 +35,8 @@ class Program
             
             //Change member function to local variable about make randome number
             int randomeCheckNumber =  NewNumber.MakeRandomNumber();
-          
+
+            int randomeCheckNumber1 =  NewNumber.MakeRandomNumber();
 
             if(CheckNumber == 1)//write
             {
@@ -89,6 +90,31 @@ class Program
 
             else if(CheckNumber ==2)//display
             {
+                if(randomeCheckNumber1 ==1)
+                {
+                    Console.WriteLine("One foot forward. One day at a time.");
+                }
+
+                else if(randomeCheckNumber1 ==2)
+                {
+                    Console.WriteLine("You are a wonderful person! ");
+                }
+
+                else if(randomeCheckNumber1 ==3)
+                {
+                    Console.WriteLine("MOve forward, good things are up ahead!");
+                }
+
+                else if(randomeCheckNumber1 ==4)
+                {
+                    Console.WriteLine("You are a child of Heavenly Father! Don't give up!");
+                }
+
+                else
+                {
+                    Console.WriteLine("I may not be there yet, but I am closer than I was yesterday!");
+                }
+
                 foreach(Write qa1 in questionAndAnswer)
                 {
                     Console.WriteLine($" - Promt:{qa1.time} {qa1.question}: {qa1.answer}");//<- write down the quesiotn and answer from list
