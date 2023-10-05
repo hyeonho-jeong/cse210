@@ -91,13 +91,13 @@ class Program
             {
                 foreach(Write qa1 in questionAndAnswer)
                 {
-                    Console.WriteLine($" - Promt:{qa1.time} {qa1.question}: {qa1.answer}");//<- write down the time, quesiotn and answer from list
+                    Console.WriteLine($" - Promt:{qa1.time} {qa1.question}: {qa1.answer}");//<- write down the quesiotn and answer from list
                 }
             }
 
             else if(CheckNumber ==3)//load
             {
-                Console.WriteLine("What is the file name?");
+                 Console.WriteLine("What is the file name?");
                 string checkFileName = Console.ReadLine();
 
                 List<Write>questionAndAnswer3 = ReadFromFile(checkFileName);
@@ -107,6 +107,7 @@ class Program
                     Console.WriteLine(qa2.question);
                     Console.WriteLine(qa2.answer);
                 }
+
             }
 
             else if(CheckNumber == 4)//save
@@ -126,7 +127,7 @@ class Program
             {
                 foreach(Write qa1 in questionAndAnswer)
                 {
-                    outputFile.WriteLine($"- Promt: {qa1.time} ,{qa1.question},:{qa1.answer}");
+                    outputFile.WriteLine($"Here is your journal - Promt: {qa1.time} ,{qa1.question},:{qa1.answer}");
                 }
             }
         }
