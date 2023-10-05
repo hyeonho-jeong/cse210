@@ -1,6 +1,6 @@
 class Numbers
 {
-     int number;
+     int num;
      int RandomNumber;
 
     //Get a number from input
@@ -8,9 +8,9 @@ class Numbers
     {
         Console.Write("What would you like to do?");
         string score = Console.ReadLine();
-        int number = int.Parse(score);
+        int num = int.Parse(score);
 
-        return number;
+        return num;
     }
 
     //Make a random number from 1 to 5
@@ -21,7 +21,4 @@ class Numbers
 
         return RandomNumber;
     }
-     
-
-
 }
