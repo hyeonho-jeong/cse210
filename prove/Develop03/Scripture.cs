@@ -1,7 +1,7 @@
 class Scripture 
 {
     private string _scripture;
-    private List<string> _hiddenWords;
+    
     public int[] array = new int[30];
 
     public int cnt = 0;
@@ -18,7 +18,6 @@ class Scripture
     public Scripture(string scripture)
     {
         _scripture = scripture;
-        _hiddenWords = new List<string>();
     }
 
     // Make a function to display on the screen
@@ -30,7 +29,7 @@ class Scripture
         foreach(string word in words)
         {
             //check if the word is hidden
-            if(_hiddenWords.Contains(word))
+            if(WordList._hiddenWords.Contains(word))
             {
                 Console.Write(" ____ ");
             }
@@ -58,13 +57,13 @@ class Scripture
         string wordToHid = words[index];
 
         //add the word to the list of hidden words
-        _hiddenWords.Add(wordToHid);
+        WordList._hiddenWords.Add(wordToHid);
     }
 
     public bool AllWordHidden()
     {
         //check if all words in the scirpture text are in the list of hidden words
         string[] words = _scripture.Split(new char[]{' '});
-        return _hiddenWords.Count == words.Length;
+        return WordList._hiddenWords.Count == words.Length;
     }  
 }
