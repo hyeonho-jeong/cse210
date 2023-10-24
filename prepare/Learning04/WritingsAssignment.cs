@@ -14,6 +14,6 @@ public class WritingAssignment : Assignment
 
         string studentName = GetStudentName();
 
-        return $"{_title} by {studentName}";
+        return $"{_title} bcdy {studentName}";
     }
 }
