@@ -2,16 +2,12 @@ using System;
 
 public class Resume
 {
-    public string _personName;
+    public string _Name;
     public List<Job> _jobs = new List<Job>();
-
-    public Resume()
-    {
-    }
 
     public void Display()
     {
-        Console.WriteLine($"Name: {_npersonName}");
+        Console.WriteLine($"Name: {_Name}");
         Console.WriteLine("Jobs:");
 
         foreach (Job job in _jobs)

@@ -17,7 +17,7 @@ class Program
         job2._endYear = 2023;
 
         Resume myResume = new Resume();
-        myResume._name = "Allision Rose";
+        myResume._Name = "Allision Rose";
 
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
