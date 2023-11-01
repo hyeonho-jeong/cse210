@@ -1,6 +1,5 @@
 class ListingActivity : Activity
 {
-    private string actName = "Listing activity";
 
     private string discription = "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.";
 
@@ -8,11 +7,14 @@ class ListingActivity : Activity
 
     private int count = 0;
 
+    public ListingActivity(string activityName)
+    {
+        _activityName = activityName;
+    }
 
-    //adding new infront to do override
     new public void startingMessage()
     {
-        Console.WriteLine($"Welcome to the {actName}\n");
+        Console.WriteLine($"Welcome to the {_activityName}\n");
     }
 
     //using override to use at child class
@@ -82,7 +84,7 @@ class ListingActivity : Activity
 
     public void lastMessage(int seco)
     {
-        Console.WriteLine($"You have completed {seco} seconds of the {actName}");
+        Console.WriteLine($"You have completed {seco} seconds of the {_activityName}");
         spinner();
     }
 }

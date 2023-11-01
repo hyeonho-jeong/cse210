@@ -1,20 +1,22 @@
+using System.ComponentModel;
+
 class BreathingActivity : Activity
 {
-    private string actName = "Breathing activity";
-
     private string discription = "This activity will help your relax by walking your through breathing in and out slowly. \nClear your mind and focus on your breathing.";
 
     private  int dece;
     private  int breathIn;
     private  int breathOut; 
 
-
-
+    public BreathingActivity(string activityName)
+    {
+        _activityName = activityName;    
+    }
 
     //adding new infront to do override
     new public void startingMessage()
     {
-        Console.WriteLine($"Welcome to the {actName}\n");
+        Console.WriteLine($"Welcome to the {_activityName}\n");
     }
 
     //using override to use at child class
@@ -24,7 +26,7 @@ class BreathingActivity : Activity
     }
 
 
-    //breath in time will be 6 sec, breath out time will be 4 sec.
+    //breath in time will be 4 sec, breath out time will be 6 sec.
     public void breathTime(int sec)
     {
         //if total breath time is not devided 10, 
@@ -78,7 +80,7 @@ class BreathingActivity : Activity
 
     public void lastMessage(int seco)
     {
-        Console.WriteLine($"You have completed {seco} seconds of the {actName}");
+        Console.WriteLine($"You have completed {seco} seconds of the {_activityName}");
         spinner();
     }
 }

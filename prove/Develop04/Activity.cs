@@ -9,7 +9,7 @@ class Activity
     //make a number for count time.
     private int countTime;
 
-    public void startingMessage()//using override to use at child class
+    public void startingMessage()
     {
         Console.WriteLine($"Welcome to the {_activityName}");
     }
@@ -19,10 +19,13 @@ class Activity
         Console.WriteLine($"{_discription}\n");
     }
 
-    public void endingMessage()
+    public void endingMessage(int sec)
     {
         Console.WriteLine("\n\nWell done!!");
         spinner();
+        Console.WriteLine($"You have completed {sec} seconds of the {_activityName}");
+        spinner();
+        
 
     }
 

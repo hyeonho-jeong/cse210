@@ -1,8 +1,6 @@
 class ReflectingActivity : Activity
 {
 
-    private string actName = "Reflecting activity";
-
     private string discription = "This activity will help you reflect on times in your life when you have shown strength and resilience. \nThis will help you recognize the power you have and how you can use it in other aspects of your life.";
 
     private int RandomNumber;
@@ -11,11 +9,15 @@ class ReflectingActivity : Activity
 
     private int num = 0;
 
+    public ReflectingActivity(string activityName)
+    {
+        _activityName = activityName;
+    }
 
     //adding new infront to do override
     new public void startingMessage()
     {
-        Console.WriteLine($"Welcome to the {actName}\n");
+        Console.WriteLine($"Welcome to the {_activityName}\n");
     }
 
     //using override to use at child class
@@ -98,7 +100,7 @@ class ReflectingActivity : Activity
 
     public void lastMessage(int seco)
     {
-        Console.WriteLine($"You have completed {seco} seconds of the {actName}");
+        Console.WriteLine($"You have completed {seco} seconds of the {_activityName}");
         spinner();
     }
 
