@@ -12,34 +12,31 @@ class Program
         Scripture scripture = new Scripture( "Trust in the Lord with all thine heart and lean not unto thine own understanding; in all thy ways acknoledge him, and he shall direct thy paths." );
 
 
-        //Make the screen empty
-        Console.Clear();
-        //show the reference and scritpure
-        reference.GetRenderedText();
+        Console.Clear();//Make the screen empty       
+        reference.GetRenderedText();//show the reference and scritpure
         scripture.DisplayScripture();
-
-        //make a loop for get enter or input quit
-        while(true)
+       
+        while(true)//make a loop for get enter or input quit
         {
            Console.WriteLine(" ");
            Console.WriteLine("Press enter to hide a word or type quit to exit:");
            string userInput = Console.ReadLine();
-            // If the user types quit, end the program
-            if (userInput.ToLower() == "quit")
+            
+            if (userInput.ToLower() == "quit")// If the user types quit, end the program
             {
                 break;
             }
-            //If the user click enter, made the scripture blank
-            else if(string.IsNullOrEmpty(userInput))
+            
+            else if(string.IsNullOrEmpty(userInput))//If the user click enter, made the scripture blank
             {
-                 // Clear the console screen
-                Console.Clear();
+                 
+                Console.Clear();// Clear the console screen
                 scripture.HideWord();
                 reference.GetRenderedText();
                 scripture.DisplayScripture();
 
-                //check if all words have been hidden
-                if(scripture.AllWordHidden())
+                
+                if(scripture.AllWordHidden())//check if all words have been hidden
                 {
                     break;
                 }

@@ -5,6 +5,31 @@ class Reference
     private string _verse1;
     private string _verse2;
 
+    public Reference()//let save the refernce in scripture
+    {
+
+    }
+
+    public string Getbook()
+    {
+        return _book;
+    }
+
+     public string Getchapter()
+    {
+        return _chapter;
+    }
+
+     public string Getverse1()
+    {
+        return _verse1;
+    }
+
+    public string Getverse2()
+    {
+        return _verse2;
+    }
+
 
     //Make two constructor. Frist is with verse 2, the other is without verse 2.
     public Reference(string book, string chapter, string verse1)

@@ -1,69 +1,58 @@
 class Scripture 
 {
-    private string _scripture;
-    
-    public int[] array = new int[30];
+    private string _scripture;//Make a valuable 
+    private List<Word> words = new List<Word>();//Make a list to put each word from scripture
 
-    public int cnt = 0;
 
-    //initializer Array
-    public void ResetArray()
+    public Scripture(string scripture) // Make a each list for each word
     {
-        while(cnt<30)
-         {
-            array[cnt++] = 0;
+        _scripture = scripture;
+        string[] eachWord = _scripture.Split(new char[]{' '});
+
+        foreach(string sepWord in eachWord)
+        {
+            Word newWord = new Word(sepWord);
+            words.Add(newWord);
         }
     }
 
-    public Scripture(string scripture)
+    
+    public void DisplayScripture()// Make a function to display on the screen
     {
-        _scripture = scripture;
-    }
-
-    // Make a function to display on the screen
-    public void DisplayScripture()
-    {
-        //convert the string into an array of words
-        string[] words = _scripture.Split(new char[]{' '});
-
-        foreach(string word in words)
+        foreach(Word word in words)
         {
-            //check if the word is hidden
-            if(WordList._hiddenWords.Contains(word))
+            if(word.GetHidden())
             {
                 Console.Write(" ____ ");
             }
             else
             {
-                Console.Write(word + " ");
+                Console.Write(word.GettextWord() + " ");
             }
         }      
     }
 
     public void HideWord()
     {
-        //Select a random word from the scripture text
-        string[] words = _scripture.Split(new char[]{' '});
-
         Random rand = new Random();
-        int index = rand.Next(words.Length);
-     
-        //Checking if the array 1 or 1
-        while(array[index] == 1){
-            index = rand.Next(words.Length);
+        int index = rand.Next(words.Count());
+
+        while(words[index].GetHidden())//Checking it is already hidden or not
+        {
+            index = rand.Next(words.Count);
         }
-
-        array[index] =1;
-        string wordToHid = words[index];
-
-        //add the word to the list of hidden words
-        WordList._hiddenWords.Add(wordToHid);
+        words[index].Hide();
     }
 
     public bool AllWordHidden()
     {
-        //check if all words in the scirpture text are in the list of hidden words
-        string[] words = _scripture.Split(new char[]{' '});
-        return WordList._hiddenWords.Count == words.Length;
+        foreach(Word word in words)
+        {
+            if(!word.GetHidden())
+            {
+                return false;
+            }
+        }
+        return true;
     }  
 }
