@@ -3,6 +3,8 @@ class Scripture
     private string _scripture;//Make a valuable 
     private List<Word> words = new List<Word>();//Make a list to put each word from scripture
 
+    //bring the reference class
+    Reference newreference = new Reference("Proverbs", "3", "5", "6");
 
     public Scripture(string scripture) // Make a each list for each word
     {
@@ -19,6 +21,8 @@ class Scripture
     
     public void DisplayScripture()// Make a function to display on the screen
     {
+        newreference.GetRenderedText();
+
         foreach(Word word in words)
         {
             if(word.GetHidden())
@@ -55,4 +59,5 @@ class Scripture
         }
         return true;
     }  
+
 }

@@ -34,30 +34,11 @@ class Program
 
                     break;
                 case 4 ://save
-                    SaveToFile(entry._pg); // save the 
+                    Journal.SaveToFile(entry._pg); // save the 
                     break;
-                default :
-                    Console.WriteLine("You have to pick a number between 1 to 5.");
-                    break;
-
             }
 
         }while(number != 5);
-    }
-
-    public static void SaveToFile(List<PromptGenerator>_pg)
-    {
-        Console.WriteLine("What is the file name?");
-        string fileName = Console.ReadLine();
-
-        using (StreamWriter outputFile = new StreamWriter(fileName))
-        {
-            foreach(PromptGenerator pg in _pg)
-            {
-                    outputFile.WriteLine($"Here is your journal - Promt: {pg.time} ,{pg.prompt},:{pg.answer}");
-            }
-        }
-
     }
 
 }

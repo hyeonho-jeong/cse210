@@ -1,7 +1,7 @@
 class Journal
 {       
     private int num;  //This is for checking optionnumber
-       
+
     public int DisplayJournal()//funciton for option print
     {
         Console.WriteLine("Please select one of the following choice \n1. Write \n2. Display \n3. Load \n4. Save \n5. Quit ");
@@ -32,5 +32,20 @@ class Journal
             Console.WriteLine(parts[2]);
           
         }
+    }
+
+    public static void SaveToFile(List<PromptGenerator>_pg)
+    {
+        Console.WriteLine("What is the file name?");
+        string fileName = Console.ReadLine();
+
+        using (StreamWriter outputFile = new StreamWriter(fileName))
+        {
+            foreach(PromptGenerator pg in _pg)
+            {
+                    outputFile.WriteLine($"Here is your journal - Promt: {pg.time} ,{pg.prompt},:{pg.answer}");
+            }
+        }
+
     }
 }

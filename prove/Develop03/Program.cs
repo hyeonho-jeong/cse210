@@ -12,8 +12,7 @@ class Program
         Scripture scripture = new Scripture( "Trust in the Lord with all thine heart and lean not unto thine own understanding; in all thy ways acknoledge him, and he shall direct thy paths." );
 
 
-        Console.Clear();//Make the screen empty       
-        reference.GetRenderedText();//show the reference and scritpure
+        Console.Clear();//Make the screen empty   
         scripture.DisplayScripture();
        
         while(true)//make a loop for get enter or input quit
@@ -32,7 +31,6 @@ class Program
                  
                 Console.Clear();// Clear the console screen
                 scripture.HideWord();
-                reference.GetRenderedText();
                 scripture.DisplayScripture();
 
                 

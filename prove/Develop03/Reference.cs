@@ -50,8 +50,9 @@ class Reference
     // Make a function to display on the screen
     public void GetRenderedText()
     {
-        Console.WriteLine($"{_book} {_chapter}:{ _verse1}-{_verse2} ");
+        Console.WriteLine($"{ _book} {_chapter}:{ _verse1}-{_verse2} ");
     }
+
 }
 
 

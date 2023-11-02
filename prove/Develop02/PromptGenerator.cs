@@ -1,11 +1,13 @@
 using System.Diagnostics.Contracts;
 using System.Dynamic;
 
-class PromptGenerator
+class PromptGenerator : Entry
 { 
     public string prompt{get; set;}
-    public string answer{get; set;}
-    public string time{get; set;}
+    //public string answer{get; set;}
+    //public string time{get; set;}
+
+    Entry entry = new Entry();
 
     private int _randomNumber;  //This is for random number
    
@@ -71,7 +73,7 @@ class PromptGenerator
     }
 
      //Make a function for list 
-     public void Display()
+     public void DisplayPrompt()
      {
         Console.WriteLine($" - Promt:{time} {prompt}: {answer}");
      }
