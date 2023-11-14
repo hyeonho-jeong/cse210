@@ -136,11 +136,6 @@ public class GoalManagement
                     ChecklistGoal clGoal = new ChecklistGoal(type, name, description, points, status, numberTimes, bonusPoints, counter);
                     AddGoal(clGoal);
                 }
-                if (entries[0] == "Negative Goal:")
-                {
-                    NegativeGoal nGoal = new NegativeGoal(type, name, description, points, status);
-                    AddGoal(nGoal);
-                }
             }
         }
     }
