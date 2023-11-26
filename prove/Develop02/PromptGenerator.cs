@@ -7,8 +7,6 @@ class PromptGenerator : Entry
     //public string answer{get; set;}
     //public string time{get; set;}
 
-    Entry entry = new Entry();
-
     private int _randomNumber;  //This is for random number
    
     public int MakeRandomNumber() //a function for making random number for prompt
