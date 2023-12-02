@@ -40,18 +40,30 @@ class Program
             switch(choice)
             {
                 case 1:    
+                    Console.Clear();
                     newTownMenu.DisplayMenu();
                     int choice1 = newChoice.UserChoicec();//asking pick a number
                     switch(choice1)
                     {
                         case 1:
+                            Console.Clear();
                             newUser.Healing();
                             break;
                         case 2:
+                            Console.Clear();
                             newUser.upgradeAttack();
                             break;
                         case 3:
+                            newUser.upgradeMaxHP();
+                            Console.Clear();                        
                             break;
+                        case 4: 
+                            Console.Clear();                           
+                            break;
+                        default:
+                            Console.WriteLine("You have to put a number among 1 to 3.");
+                            break;
+                        
                     }
 
                     break;
@@ -60,6 +72,10 @@ class Program
                     break;
                 case 3:
                     break;
+                default:
+                        Console.Clear();
+                        Console.WriteLine("You have to put a number between 1 to 3.");
+                        break;
             }
         }       
     }

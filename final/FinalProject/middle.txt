@@ -1,0 +1,32 @@
+Gobleader, 10, 40, 120, 120, 30, 20
+Gobline Follower, 10, 38, 125, 125, 20, 30
+Ice Wolf, 11, 44, 140, 140, 35, 35
+Death Box, 11, 45, 200, 200, 40, 40
+Hell Messenger, 12, 60, 250, 250, 60, 50
+Silent Creeper, 12, 30, 200,200, 20, 30
+Murderer, 12, 20, 150, 150,30, 10
+Gator Killer, 12, 23, 100, 100,20, 20
+Killer Ant, 12, 30, 150, 150, 15, 15
+Cyclops, 13, 50, 300, 300, 40, 30
+Dragon, 14, 60, 400, 400, 50, 20
+Ice Dragon, 14, 65, 350, 350, 20, 50
+Robot Hellraiser, 13, 55, 250, 250, 30,40
+Red Phoenix, 15, 120, 700, 700, 100, 20
+Blue Phoenix, 15, 120, 700, 700, 100, 20
+Yellow Phoenix, 15, 120, 700, 700, 100, 20
+Reptilian Humanoid, 12, 40, 170, 170, 20,20
+Undead, 10, 20, 300, 300, 30, 30
+Zombie, 10, 20, 200, 200, 20, 20
+Ghoul, 11, 30, 300, 300, 30, 30
+Vampire, 12, 50, 250, 250, 50, 30
+Demon, 15, 200, 1000, 1000, 100, 30
+Mummy, 11, 35, 200, 200, 30, 30
+Werewolf, 13, 60, 400, 400, 30, 30
+Sand Viper, 6, 18, 80, 100, 21,20
+Earthsould, 6, 30, 100, 120, 29, 21
+Horror Box, 6, 20, 70, 100, 17, 30
+Watchman of Darkness, 7, 25, 90, 110, 30, 30
+Slime, 1, 5, 20, 100, 5, 6
+Fang Rat, 1, 5, 20, 100, 6, 5
+Harpy, 3, 7, 30, 100, 15, 7
+Goblin, 4, 10, 30, 100, 20, 10

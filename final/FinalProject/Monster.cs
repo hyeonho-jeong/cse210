@@ -13,11 +13,11 @@ class Monster : FightUnit
         
     }
 
-    public string LoadFile() // check the file name.
+    public string LoadFile() // check the file name depends on user's level.
     {
         if(newUser.level < 10)
             fileName = "normal.txt";
-        else if(newUser.level > 10 && newUser.level < 15)
+        else if(newUser.level >= 10 && newUser.level < 15)
             fileName = "middle.txt";
         else
             fileName = "hard.txt";
@@ -31,15 +31,9 @@ class Monster : FightUnit
         string[] lines = System.IO.File.ReadAllLines(fileName);
         Random newrandom = new Random();
         int randomeLineNum = newrandom.Next(lineCount);
-        int indicator = 0;
 
-        while(lines != null)
-        {
-            if(indicator == randomeLineNum)
-            {
-                foreach (string line in lines)
-                {
-                    string[] parts = line.Split(",");
+        string theLine = lines[randomeLineNum];
+                    string[] parts = theLine.Split(",");
 
                     name = parts[0];
                     string monsterlevel = parts[1];
@@ -54,18 +48,12 @@ class Monster : FightUnit
                         exp = int.Parse(monsterexp);
                     string monstermoney = parts[6];
                         money = int.Parse(monstermoney);    
-                }
-                break;
-            }
-            indicator++;
-        }
-        indicator = 0;
     }
 
     public override void UnitInfo()
     {
         Console.WriteLine("-----------------------");
-        Console.WriteLine($"  Information of the {name}");
+        Console.WriteLine($"  Name: {name}");
         Console.WriteLine($"  Level : {this.level}");
         Console.WriteLine($"  Attack : {this.attack}");
         Console.WriteLine($"  HP : {this.hp} / {this.maxHp}");

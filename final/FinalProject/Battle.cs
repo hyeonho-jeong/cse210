@@ -69,9 +69,10 @@ class Battle
                 else
                 {
                     uif.exp = 0;
+                    uif.maxExp += 20;
                     uif.level +=1;
                     uif.maxExp += 10;
-                    uif.attack += 1;
+                    uif.attack += 2;
                 }
 
                 uif.money += newMonster.money;
@@ -79,10 +80,11 @@ class Battle
         }
         else
         {
-            Console.WriteLine($"It's a {newUser.name}'s defeat.");
+            Console.WriteLine($"It's a {newUser.name}'s defeat.\n You have to go to the village and recover your hp.");
 
         }
         Console.ReadKey();
+        Console.Clear();
 
         return;
     } 
@@ -92,13 +94,15 @@ class Battle
         foreach(User uif in userInformation)
         {
             Console.WriteLine("-----------------------");
-            Console.WriteLine($"  Information of the {uif.name}");
+            Console.WriteLine($"  Name: {uif.name}");
             Console.WriteLine($"  Level : {uif.level}");
             Console.WriteLine($"  Attack : {uif.attack}");
             Console.WriteLine($"  HP : {uif.hp} / {uif.maxHp}");
             Console.WriteLine($"  exp : {uif.exp}");
             Console.WriteLine($"  money : {uif.money}");
             Console.WriteLine("-----------------------");
+            Console.ReadLine();
+            Console.Clear();
         }
                 
     }

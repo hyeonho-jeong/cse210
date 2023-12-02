@@ -11,7 +11,7 @@ class Welcome
     {
         Console.WriteLine($"{askUserName}");
         userName = Console.ReadLine();
-        Console.WriteLine($"{welcomeMessage} {userName}!");
+        Console.WriteLine($"\n{welcomeMessage} {userName}!");
     
         return userName;
     } 

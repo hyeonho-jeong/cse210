@@ -20,9 +20,9 @@ abstract class FightUnit
     public void Damage(FightUnit _OtherUnit)
     {   
         Console.Write(name);
-        Console.Write("gets");
+        Console.Write(" gets ");
         Console.Write(_OtherUnit.attack);
-        Console.WriteLine("damage");
+        Console.WriteLine(" damage");
         Console.ReadKey();
         hp -= _OtherUnit.attack;
         Console.WriteLine("");

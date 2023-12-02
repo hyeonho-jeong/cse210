@@ -11,11 +11,6 @@ class User : FightUnit
         return this.level;
     }
 
-    public int AttackUp(int addAttack)
-    {
-        return attack += addAttack;
-    }
-
    
     public bool checkHp()
     {
@@ -35,7 +30,7 @@ class User : FightUnit
     public override void UnitInfo()
     {    
         Console.WriteLine("-----------------------");
-        Console.WriteLine($"  Information of the {name}");
+        Console.WriteLine($"  Name: {name}");
         Console.WriteLine($"  Level : {this.level}");
         Console.WriteLine($"  Attack : {this.attack}");
         Console.WriteLine($"  HP : {this.hp} / {this.maxHp}");
@@ -48,7 +43,9 @@ class User : FightUnit
     {
         if(checkHp() == true)
                 {
+                    Console.WriteLine("----------------------");
                     Console.WriteLine("HP is already full.");
+                    Console.WriteLine("----------------------");
                 }
                 else
                 {
@@ -60,13 +57,33 @@ class User : FightUnit
     {
         if(this.money <10)
         {
-            Console.WriteLine("Money is scarce.");
+            Console.WriteLine("Money is scarce. \nYou need at least 10 money to upgrade your attack power.");
         }
         else
         {
-            this.attack += 3;
+            Console.WriteLine("Use 10 money to increase your attack power by 5.");
+            this.attack += 5;
             this.money -= 10;
         }
+        Console.ReadKey();
+        Console.Clear();
+    }
+
+
+    public void upgradeMaxHP()
+    {
+        if(this.money <10)
+        {
+            Console.WriteLine("Money is scarce. \nYou need at least 10 money to upgrade your Max HP.");
+        }
+        else
+        {
+            Console.WriteLine("Use 10 money to increase your max HP by 10.");
+            this.maxExp += 10;
+            this.money -= 10;
+        }
+        Console.ReadKey();
+        Console.Clear();
     }
 
 }
